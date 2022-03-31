@@ -14,17 +14,21 @@ app.use((req, _, next) => {
 
 app.use(express.static("public"))
 
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/public/index.html")
-})
+// app.get("/index.html", (req, res) => {
+//     res.sendFile(__dirname + "/public/index.html")
+// })
 
-app.get("/community", (req, res) => {
-    res.sendFile(__dirname + "/public/community.html")
-})
+// app.get("/community.html", (req, res) => {
+//     res.sendFile(__dirname + "/public/community.html")
+// })
 
-app.get("/solutions"), (req, res) => {
-    res.sendFile(__dirname + "/public/solutions.html")
-}
+// app.get("/solutions.html"), (req, res) => {
+//     res.sendFile(__dirname + "/public/solutions.html")
+// }
+
+// app.get("/pricing.html"), (req, res) => {
+//     res.sendFile(__dirname + "/public/pricing.html")
+// }
 
 app.use((_, res) => {
     res.status(404)
